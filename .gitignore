@@ -1,0 +1,7 @@
+
+HotFix/.idea
+HotFix/.vs
+HotFix/bin
+HotFix/HotFix.sln.DotSettings.user
+*.dll
+HotFix/obj
