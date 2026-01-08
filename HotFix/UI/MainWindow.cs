@@ -169,7 +169,7 @@ namespace HotFix
 
         private void LeaseHorsePanel()
         {
-            UIManager.instance.PopUpWnd(FilesName.RENTPANEL);
+            UIManager.instance.PopUpWnd(FilesName.COMMONDATAPANEL,true,false,5,null,null);
             //JsonData data = new JsonData();
             //data["pageNum"] = 1;
             //data["pageSize"] = 6;

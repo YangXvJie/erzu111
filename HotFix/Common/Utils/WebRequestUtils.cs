@@ -71,6 +71,9 @@ namespace HotFix
 
         public static string frontUrl;
         public static string myToken = "";
+
+        public static string rentHorseHistory { get; internal set; }
+
         public static void InitUrl(string front,string token) { 
         
             if(hasInit)return;
