@@ -44,6 +44,25 @@ namespace HotFix
         }
     }
 
+    public class HorsezyTable
+    {
+        public string ZyNum;
+        public string ZyName;
+        
+
+        public HorsezyTable(string zyNum, string zyName)
+        {
+            ZyNum = zyNum;
+            ZyName = zyName;
+        }
+
+        internal static void Add(object zyNum, object zyName)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
     public class ListFront
     {
         public string type;

@@ -20,6 +20,7 @@ namespace HotFix
         private static Dictionary<int, BuildingData> buildingDataDic = new Dictionary<int, BuildingData>();
         private static Dictionary<string, string> HorseBloodDataDic = new Dictionary<string, string>();
         private static Dictionary<string, string> HorseTypeDataDic = new Dictionary<string, string>();
+        private static Dictionary<string, string> HorsezyTableDataDic = new Dictionary<string, string>();
         private static string parentPath = "Assets/GameData/Data/Json/";
         public static List<string> buildingDataList = new List<string>()
         {
@@ -143,6 +144,23 @@ namespace HotFix
                 });
             }
             return HorseTypeDataDic;
+        }
+        internal static Dictionary<string, string> GetzyTable()
+        {
+            if (HorsezyTableDataDic.Count <= 0)
+            {
+                HorsezyTableDataDic = new Dictionary<string, string>();
+                AnalyzeJson("zyTable", (JsonData temp) =>
+                {
+                    foreach (JsonData item in temp["data"])
+                    {
+                        HorsezyTable t = JsonMapper.ToObject<HorsezyTable>(item.ToJson());
+                        HorsezyTable.Add(t.ZyNum, t.ZyName);
+                    }
+                });
+            }
+
+            return HorsezyTableDataDic;
         }
     }
 }
