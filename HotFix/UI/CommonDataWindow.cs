@@ -23,7 +23,7 @@ namespace HotFix
         Text quotaTitleText;// 标题文本
 
         public override void Awake(object param1 = null, object param2 = null, object param3 = null)
-        {
+        {  
             base.Awake(param1, param2, param3);
             FindAllComponent();
             AddAllBtnListtener();
