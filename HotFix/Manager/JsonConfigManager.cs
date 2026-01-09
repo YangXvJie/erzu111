@@ -9,6 +9,7 @@ using UnityEngine;
 using LitJson;
 using System.Xml.Linq;
 using System.Security.Cryptography;
+using HotFix.GameDatas;
 
 namespace HotFix
 {
@@ -18,7 +19,10 @@ namespace HotFix
         private static Dictionary<int, AllPrefabsData> allPrefabsDataDic = new Dictionary<int, AllPrefabsData>();
         private static List<BuildingData> allBuildingData = null;
         private static Dictionary<int, BuildingData> buildingDataDic = new Dictionary<int, BuildingData>();
+        
         private static Dictionary<string, string> HorseBloodDataDic = new Dictionary<string, string>();
+        private static Dictionary<string, string> MapDataDic = new Dictionary<string, string>();
+
         private static Dictionary<string, string> HorseTypeDataDic = new Dictionary<string, string>();
         private static Dictionary<string, string> HorsezyTableDataDic = new Dictionary<string, string>();
         private static string parentPath = "Assets/GameData/Data/Json/";
@@ -145,22 +149,23 @@ namespace HotFix
             }
             return HorseTypeDataDic;
         }
-        internal static Dictionary<string, string> GetzyTable()
+        internal static Dictionary<string, string> GetMapTable()
         {
-            if (HorsezyTableDataDic.Count <= 0)
+            if (MapDataDic.Count <= 0)
             {
-                HorsezyTableDataDic = new Dictionary<string, string>();
-                AnalyzeJson("zyTable", (JsonData temp) =>
+                MapDataDic = new Dictionary<string, string>();
+                AnalyzeJson("MapiTable", (JsonData temp) =>
                 {
                     foreach (JsonData item in temp["data"])
                     {
-                        HorsezyTable t = JsonMapper.ToObject<HorsezyTable>(item.ToJson());
-                        HorsezyTable.Add(t.ZyNum, t.ZyName);
+                        MapiTableData T=new MapiTableData(item["MapName"].ToString(), item["MapPath"].ToString());
+                        MapDataDic.Add(T.MapName, T.MapNum);
+                        Debug.Log(T);
                     }
                 });
             }
 
-            return HorsezyTableDataDic;
+            return MapDataDic;
         }
     }
 }

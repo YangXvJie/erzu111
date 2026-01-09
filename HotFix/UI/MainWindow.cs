@@ -169,14 +169,12 @@ namespace HotFix
 
         private void LeaseHorsePanel()
         {
-            UIManager.instance.PopUpWnd(FilesName.COMMONDATAPANEL,true,false, new object[] { 5 }, null,null);
-            Debug.LogError(JsonConfigManager.GetzyTable());
-
+            UIManager.instance.PopUpWnd(FilesName.COMMONDATAPANEL,true,false,new object[] {5},null,null);
             //JsonData data = new JsonData();
             //data["pageNum"] = 1;
             //data["pageSize"] = 6;
             //data["priceSort"] = 0;
-            // UIManager.instance.PopUpWnd(FilesName.RENTPANEL);
+           // UIManager.instance.PopUpWnd(FilesName.RENTPANEL);
             //WebRequestManager.instance.AsyncLoadUnityWebRequest(WebRequestUtils.rentHorseList, WebRequestFuncitons.GetRentHorseList, true, JsonMapper.ToJson(data), RFrameWork.instance.token);
         }
 

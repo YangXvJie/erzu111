@@ -118,6 +118,7 @@
     <Compile Include="GameDatas\ClientData\HistoryData.cs" />
     <Compile Include="GameDatas\FilesName.cs" />
     <Compile Include="GameDatas\HorseBodyDatas.cs" />
+    <Compile Include="GameDatas\MapiTableData.cs" />
     <Compile Include="GameDatas\PlayerTypeData.cs" />
     <Compile Include="GameDatas\ServerData\Request\BreedSiteList.cs" />
     <Compile Include="GameDatas\ServerData\Request\HorseData.cs" />

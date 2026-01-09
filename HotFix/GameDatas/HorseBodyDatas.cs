@@ -43,23 +43,20 @@ namespace HotFix
             TypeName = typeName;
         }
     }
-
+    [System.Serializable]
     public class HorsezyTable
     {
-        public string ZyNum;
-        public string ZyName;
+        public string MapNum;
+        public string MapName;
         
 
-        public HorsezyTable(string zyNum, string zyName)
+        public HorsezyTable(string mapNum, string mapName)
         {
-            ZyNum = zyNum;
-            ZyName = zyName;
+            MapNum = mapNum;
+            MapName = mapName;
         }
 
-        internal static void Add(object zyNum, object zyName)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 
 
