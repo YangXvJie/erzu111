@@ -19,7 +19,7 @@ namespace HotFix
             try
             {
                 Dictionary<int, AllPrefabsData> prefabDatas = JsonConfigManager.GetPrefabsData();
-                Dictionary<string,string> HorsezyTable= JsonConfigManager.GetMapTable();
+                
                 int allCount = 0;
                 foreach (var tableName in JsonConfigManager.buildingDataList)
                 {

@@ -107,7 +107,24 @@ namespace HotFix
             }
             return allPrefabsDataDic;
         }
+        internal static Dictionary<string, string> GetMapTable()
+        {
+            if (MapDataDic.Count <= 0)
+            {
+                MapDataDic = new Dictionary<string, string>();
+                AnalyzeJson("MapiTable", (JsonData temp) =>
+                {
+                    foreach (JsonData item in temp["data"])
+                    {
+                        MapiTableData T = new MapiTableData(item["MapName"].ToString(), item["MapNum"].ToString());
+                        MapDataDic.Add(T.MapName, T.MapNum);
+                        Debug.Log(T.MapName+"  3333333333333333333333333  "+T.MapNum);
+                    }
+                });
+            }
 
+            return MapDataDic;
+        }
         /// <summary>
         /// 获取马匹血统的方法
         /// </summary>
@@ -149,23 +166,6 @@ namespace HotFix
             }
             return HorseTypeDataDic;
         }
-        internal static Dictionary<string, string> GetMapTable()
-        {
-            if (MapDataDic.Count <= 0)
-            {
-                MapDataDic = new Dictionary<string, string>();
-                AnalyzeJson("MapiTable", (JsonData temp) =>
-                {
-                    foreach (JsonData item in temp["data"])
-                    {
-                        MapiTableData T=new MapiTableData(item["MapName"].ToString(), item["MapPath"].ToString());
-                        MapDataDic.Add(T.MapName, T.MapNum);
-                        Debug.Log(T);
-                    }
-                });
-            }
-
-            return MapDataDic;
-        }
+        
     }
 }
