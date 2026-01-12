@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
@@ -58,7 +57,7 @@ namespace HotFix
         {
             m_QuitBtn = m_Transform.Find("Return").GetComponent<Button>();
             m_Name = m_Transform.Find("Back/Btns/Name").GetComponent<Text>();
-            m_SexIcon = m_Transform.Find("Back/Btns/Sex/Image").GetComponent<Image>();
+            m_SexIcon = m_Transform.Find("Back/Btns/Sex").GetComponent<Image>();
             m_Age = m_Transform.Find("Back/Btns/Name/Time/Text").GetComponent<Text>();
             m_QiPaoNum = m_Transform.Find("Back/JingSaiBack/BackImg/QiPao/SliderBack/Des").GetComponent<Text>();
             m_SuDuNum = m_Transform.Find("Back/JingSaiBack/BackImg/SuDu/SliderBack/Des").GetComponent<Text>();
