@@ -19,7 +19,6 @@ namespace HotFix
 
         public void init(GameObject item, HorseDetail data)
         {
-            item.gameObject.SetActive(true);
             m_transform = item.GetComponent<Transform>();
             m_Data = data;
             m_Name = m_transform.Find("Title").GetComponent<Text>();
@@ -43,6 +42,7 @@ namespace HotFix
 
             });
 
+            m_transform.gameObject.SetActive(true);
         }
     }
 
