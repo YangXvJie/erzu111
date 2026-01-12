@@ -148,6 +148,7 @@
     <Compile Include="Objects\PlayStateItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\CommonDataWindow.cs" />
+    <Compile Include="UI\DetailWindow.cs" />
     <Compile Include="UI\HorseFeedWindow.cs" />
     <Compile Include="UI\Item\AllHorseItem.cs" />
     <Compile Include="UI\LoadingWindow.cs" />
