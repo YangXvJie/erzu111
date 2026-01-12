@@ -74,7 +74,7 @@ namespace HotFix
             m_JingSaiBtn = m_Transform.Find("Back/Btns/JingSai").GetComponent<Button>();
             m_BiSaiBtn = m_Transform.Find("Back/Btns/BiSai").GetComponent<Button>();
             m_JingSaiPanel = m_Transform.Find("Back/JingSaiBack").gameObject;
-            m_BiSaiPanel = m_Transform.Find("Back/BiSaiBack").gameObject;
+            m_BiSaiPanel = m_Transform.Find("Back/BiSaiBack").gameObject;  
         }
 
         public override void OnShow(object param1 = null, object param2 = null, object param3 = null)

@@ -182,7 +182,7 @@ namespace HotFix
                 AnalyzeJson("TypeTable", (JsonData temp) =>
                 {
                     foreach (JsonData item in temp["data"])
-                    {
+                    {   
                         HorseType t = JsonMapper.ToObject<HorseType>(item.ToJson());
                         HorseTypeDataDic.Add(t.TypeNum, t.TypeName);
                     }

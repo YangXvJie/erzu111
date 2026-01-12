@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace HotFix
 {
-    class AllHorseItem
+    class AllHorseItem   
     {
         private Transform m_transform;
         private HorseDetail m_Data;

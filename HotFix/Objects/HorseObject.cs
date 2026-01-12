@@ -167,7 +167,7 @@ namespace HotFix
                     color2 = new Color(1f, 0.95f, 0.47f);
                     break;
                 case "O2":
-                    color2 = new Color(1f, 0.75f, 0.47f);
+                    color2 = new Color(1f, 0.75f, 0.47f);  
                     break;
                 default:
                     break;
