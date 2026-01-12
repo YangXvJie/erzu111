@@ -37,6 +37,9 @@ namespace HotFix
             HorseDetail horseData = (HorseDetail)param1;
             m_HorseObject = ObjectsManager.instance.AddObject(m_Transform.Find("BG/HorsePos").GetChild(0).gameObject, "Horse", "HorseObject", new HorseData(horseData.id, horseData.code, 1, 0)) as HorseObject;
 
+            m_Name.text= horseData.name;
+            m_Age.text= horseData.age;
+
             m_QiPaoNum.text = horseData.startSpeed;//起跑属性
             m_SuDuNum.text = horseData.speed;// 速度属性
             m_NaiLiNum.text = horseData.endurance;//耐力属性
