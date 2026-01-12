@@ -12,6 +12,7 @@ namespace HotFix
     /// </summary>
     public static class UserInfoManager
     {
+        public static List<HorseDetail> HorseDetails = new List<HorseDetail>();
         public static bool startGame;
         public static GameObject horseClone;
         public static string userID;

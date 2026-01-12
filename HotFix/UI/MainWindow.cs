@@ -76,6 +76,8 @@ namespace HotFix
         public override void Awake(object param1 = null, object param2 = null, object param3 = null)
         {
             var data = JsonConfigManager.GetMapTable();
+            var datah = JsonConfigManager.GetHorseDataDic();
+            UserInfoManager.HorseDetails = JsonConfigManager.GetAllHorseDetails();
             MountHorse = ShowMountHorseBtn;
             GetDownHorse = ShowGetDownHorseBtn;
             PutFood = ShowPutFoodBtn;
